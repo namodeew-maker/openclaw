@@ -1,0 +1,10 @@
+{
+  "channels": {
+    "telegram": {
+      "botToken": "8329302506:AAGHU-Oarw3THcYiHH10PfYIenLxegAb07M",
+      "accounts": {
+        "default": { "botToken": "8329302506:AAGHU-Oarw3THcYiHH10PfYIenLxegAb07M" }
+      }
+    }
+  }
+}
