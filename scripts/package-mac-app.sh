@@ -4,6 +4,13 @@ set -euo pipefail
 # Build and bundle OpenClaw into a minimal .app we can open.
 # Outputs to dist/OpenClaw.app
 
+# Check if running on macOS
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  echo "❌ This script is for macOS only. You are on $(uname -s)."
+  echo "❌ For PC builds, use the standard 'pnpm build' command."
+  exit 1
+fi
+
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 APP_ROOT="$ROOT_DIR/dist/OpenClaw.app"
 BUILD_ROOT="$ROOT_DIR/apps/macos/.build"
